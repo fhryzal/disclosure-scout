@@ -68,11 +68,3 @@ inurl:/security "OpenZeppelin" "bounty"
 inurl:/security "CertiK" "bounty"
 inurl:/security "Halborn" "bounty"
 inurl:/security "Quantstamp" "bounty"
-
-# --- Direct (non-Immunefi) web3 programs ---
-"smart contract" "audit" "reward" -site:immunefi.com
-"on-chain" "bounty" "reward" -site:immunefi.com -site:hackerone.com
-"DeFi" "bug bounty" "reward" -site:immunefi.com
-"protocol" "bug bounty" "reward" -site:immunefi.com -site:hackerone.com
-"submit" "vulnerability" "token" "reward" -site:immunefi.com
-"web3" "responsible disclosure" "reward" -site:immunefi.com

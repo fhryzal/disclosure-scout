@@ -30,17 +30,17 @@ traffic.
 | File | Focus | Queries |
 |------|-------|---------|
 | `01-security-txt.txt` | `/.well-known/security.txt` contact files | 10 |
-| `02-responsible-disclosure.txt` | General VDP / policy landing pages | 15 |
-| `03-monetary-reward.txt` | Programs that explicitly advertise payment | 33 |
-| `04-crypto-web3.txt` | DeFi / wallet / on-chain bounty pages | 55 |
-| `05-regional.txt` | Regional disclosure (NL/UK/DE/BE/AU/BR/IN/SG/JP/KR) | 33 |
+| `02-responsible-disclosure.txt` | General VDP / policy landing pages | 14 |
+| `03-monetary-reward.txt` | Programs that explicitly advertise payment | 42 |
+| `04-crypto-web3.txt` | DeFi / wallet / on-chain bounty pages | 59 |
+| `05-regional.txt` | Regional disclosure (NL/UK/DE/BE/AU/BR/IN/SG/JP/KR) | 32 |
 | `06-gov-edu.txt` | Government and academic programs | 9 |
 | `07-platform-leak.txt` | Platform-hosted but discoverable off-platform | 8 |
-| `08-source-code-leak.txt` | git/svn/env/backup exposure | 15 |
+| `08-source-code-leak.txt` | git/svn/env/backup exposure | 14 |
 | `09-cloud-exposure.txt` | S3 / GCS / Azure blob exposure | 9 |
-| `10-api-secrets.txt` | swagger / graphql / key material in public files | 13 |
-| `11-self-hosted.txt` | Self-hosted bounty programs (no platform middleman) | 41 |
-| `12-platforms.txt` | Big bounty platform programs (H1/BC/Immunefi/etc.) | 49 |
+| `10-api-secrets.txt` | swagger / graphql / key material in public files | 12 |
+| `11-self-hosted.txt` | Self-hosted bounty programs (no platform middleman) | 36 |
+| `12-platforms.txt` | Big bounty platform programs (H1/BC/Immunefi/etc.) | 54 |
 
 Query counts are approximate — the library grows over time.
 

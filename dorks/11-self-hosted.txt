@@ -41,13 +41,6 @@ inurl:"/security" "submit a report" "reward"
 "uses Bugheist"
 "deployed" "bug bounty" "platform"
 
-# --- Direct crypto/web3 self-hosted ---
-"smart contract" "audit" "reward" -site:immunefi.com
-"on-chain" "bounty" "reward" -site:immunefi.com -site:hackerone.com
-"DeFi" "bug bounty" "reward" -site:immunefi.com
-"protocol" "bug bounty" "reward" -site:immunefi.com -site:hackerone.com
-"submit" "vulnerability" "token" "reward" -site:immunefi.com
-
 # --- Hall of fame (direct) ---
 inurl:"/security" "hall of fame" "reward" -site:hackerone.com -site:bugcrowd.com
 inurl:"/security" "hall of fame" "$" -site:hackerone.com

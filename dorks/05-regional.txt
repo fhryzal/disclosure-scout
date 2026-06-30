@@ -8,8 +8,6 @@ site:*.nl "bug bounty"
 
 # --- United Kingdom ---
 site:*.uk "responsible disclosure" "reward"
-site:*.ac.uk "responsible disclosure"
-site:*.gov.uk "vulnerability disclosure"
 "responsible disclosure" r=h:uk
 
 # --- Germany ---
