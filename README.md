@@ -30,6 +30,8 @@
 - [Platform Filtering](#platform-filtering)
 - [Methodology](#methodology)
 - [Legal & Ethics](#legal--ethics)
+- [Contributing](#contributing)
+- [Changelog](#changelog)
 - [License](#license)
 
 ---
@@ -259,6 +261,16 @@ Only test systems you are authorized to test. Read each program's policy and rul
 - Respect remediation windows
 - Don't publish before the program's disclosure window closes
 - If a page has no policy, treat the target as off-limits for active testing
+
+---
+
+## Contributing
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for guidelines on adding dork queries, new categories, and improving `scout.py`.
+
+## Changelog
+
+See [`CHANGELOG.md`](CHANGELOG.md) for version history.
 
 ---
 

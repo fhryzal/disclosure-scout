@@ -40,6 +40,10 @@ class DorkLibrary:
         out = {}
         files = [self.dir / name] if name else sorted(self.dir.glob("*.txt"))
         for f in files:
+            if not f.exists():
+                available = ", ".join(p.name for p in sorted(self.dir.glob("*.txt")))
+                print(f"Category '{name}' not found. Available: {available}", file=sys.stderr)
+                sys.exit(1)
             queries = []
             for raw in f.read_text(encoding="utf-8").splitlines():
                 line = raw.strip()
