@@ -39,7 +39,8 @@ traffic.
 | `08-source-code-leak.txt` | git/svn/env/backup exposure | 15 |
 | `09-cloud-exposure.txt` | S3 / GCS / Azure blob exposure | 9 |
 | `10-api-secrets.txt` | swagger / graphql / key material in public files | 13 |
-| `11-self-hosted.txt` | Self-hosted bounty programs (no platform middleman) | 40 |
+| `11-self-hosted.txt` | Self-hosted bounty programs (no platform middleman) | 41 |
+| `12-platforms.txt` | Big bounty platform programs (H1/BC/Immunefi/etc.) | 49 |
 
 Query counts are approximate — the library grows over time.
 
@@ -58,6 +59,7 @@ dorks/
   09-cloud-exposure.txt         S3 / GCS / Azure blob exposure
   10-api-secrets.txt            swagger / graphql / key material in public files
   11-self-hosted.txt            self-hosted bounty programs (direct payouts)
+  12-platforms.txt              big bounty platform programs (H1/BC/Immunefi/etc.)
 scout.py                        optional runner — reads the dork files and dispatches to a backend
 docs/methodology.md             how to triage and what to do (and not do) with findings
 ```
@@ -93,6 +95,9 @@ python3 scout.py --backend exa-mcp --category 04-crypto-web3.txt --json
 
 # focus on self-hosted direct programs
 python3 scout.py --backend exa-mcp --category 11-self-hosted.txt --json
+
+# enumerate programs on a specific big platform
+python3 scout.py --backend exa-mcp --category 12-platforms.txt --platforms --json
 
 # include platform-hosted results (disables the default platform filter)
 python3 scout.py --backend exa --platforms

@@ -1,0 +1,81 @@
+# Big bug bounty platform programs (HackerOne, Bugcrowd, Immunefi, etc.)
+# Use these to enumerate active programs on the major platforms.
+# Pair with --platforms flag in scout.py to keep these results (filtered by default).
+
+# --- HackerOne ---
+site:hackerone.com "bug bounty" "reward"
+site:hackerone.com inurl:/programs "bounty"
+site:hackerone.com inurl:/reports "reward"
+"managed by HackerOne" inurl:/security
+inurl:hackerone.com "launched" "bounty"
+site:hackerone.com "critical" "$" "reward"
+site:hackerone.com "submit report" "bounty"
+"hackerone.com" "launch date" "bounty"
+
+# --- Bugcrowd ---
+site:bugcrowd.com "bug bounty" "reward"
+site:bugcrowd.com inurl:/programs "bounty"
+site:bugcrowd.com inurl:/crowd "reward"
+"powered by bugcrowd" inurl:/security
+site:bugcrowd.com "critical" "reward"
+site:bugcrowd.com "submit" "bounty"
+
+# --- Immunefi (crypto/web3) ---
+site:immunefi.com "bug bounty" "reward"
+site:immunefi.com inurl:/bounty "reward"
+site:immunefi.com "smart contract" "bounty"
+site:immunefi.com "DeFi" "reward"
+site:immunefi.com "critical" "$" "reward"
+site:immunefi.com "blockchain" "bounty"
+site:immunefi.com "protocol" "reward"
+immunefi.com "launch" "bounty" "reward"
+
+# --- Intigriti ---
+site:intigriti.com "bug bounty" "reward"
+site:intigriti.com inurl:/programs "bounty"
+"runs on Intigriti" inurl:/security
+site:intigriti.com "critical" "reward"
+
+# --- YesWeHack ---
+site:yeswehack.com "bug bounty" "reward"
+site:yeswehack.com inurl:/programs "bounty"
+site:yeswehack.com "critical" "reward"
+
+# --- HackenProof ---
+site:hackenproof.com "bug bounty" "reward"
+site:hackenproof.com inurl:/programs "bounty"
+site:hackenproof.com "critical" "reward"
+site:hackenproof.com "crypto" "bounty"
+
+# --- Cobalt ---
+site:cobalt.io "bug bounty" "reward"
+site:cobalt.io inurl:/programs "bounty"
+site:cobalt.io "pen test" "reward"
+
+# --- Synack ---
+site:synack.com "bug bounty" "reward"
+"powered by synack" inurl:/security
+
+# --- Open Bug Bounty ---
+site:openbugbounty.org "bug bounty"
+site:openbugbounty.org inurl:/researchers "reward"
+
+# --- Federacy ---
+site:federacy.com "bug bounty" "reward"
+"powered by federacy" inurl:/security
+
+# --- Bountysource ---
+site:bountysource.com "bug bounty" "reward"
+site:bountysource.com "issue" "reward"
+
+# --- Cross-platform discovery (which platforms a company uses) ---
+inurl:/.well-known/security.txt "hackerone"
+inurl:/.well-known/security.txt "bugcrowd"
+inurl:/.well-known/security.txt "immunefi"
+inurl:/.well-known/security.txt "intigriti"
+inurl:/.well-known/security.txt "hackenproof"
+inurl:/.well-known/security.txt "yeswehack"
+inurl:/.well-known/security.txt "cobalt"
+"bug bounty" "hackerone" OR "bugcrowd" OR "immunefi" inurl:/security
+"vulnerability" "submit" "hackerone.com" OR "bugcrowd.com" inurl:/security
+"responsible disclosure" "powered by" "bounty"
