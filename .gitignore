@@ -1,0 +1,6 @@
+# generated scan output
+output/
+# python
+__pycache__/
+*.pyc
+*.pyo

@@ -41,11 +41,14 @@ rephrase the dork as a natural sentence).
 # list ready-to-paste search URLs for every dork (no key needed)
 python3 scout.py --backend links
 
-# actually query Exa and filter out the big bounty platforms
-EXA_API_KEY=your_key python3 scout.py --backend exa --num 10 --no-platforms
+# query the free no-key Exa MCP endpoint via mcporter (needs mcporter + exa server)
+python3 scout.py --backend exa-mcp --num 10 --no-platforms
+
+# query the paid Exa REST API and filter out the big bounty platforms
+EXA_API_KEY=*** python3 scout.py --backend exa --num 10 --no-platforms
 
 # one category, machine-readable
-EXA_API_KEY=your_key python3 scout.py --backend exa --category 04-crypto-web3.txt --json
+python3 scout.py --backend exa-mcp --category 04-crypto-web3.txt --json
 ```
 
 No keys are bundled. `scout.py` reads `EXA_API_KEY` or `BING_API_KEY` from the
