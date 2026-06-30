@@ -1,0 +1,9 @@
+# Programs hosted on / powered by known platforms (still discoverable off-platform)
+"powered by bugcrowd" -site:bugcrowd.com
+"powered by synack" -site:synack.com
+"submit vulnerability report" -site:hackerone.com -site:bugcrowd.com
+inurl:/.well-known/security.txt intext:hackerone
+inurl:/.well-known/security.txt intext:bugcrowd
+"managed by HackerOne" -site:hackerone.com
+"hosted on Bugcrowd" -site:bugcrowd.com
+"runs on Intigriti" -site:intigriti.com

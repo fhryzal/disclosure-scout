@@ -1,0 +1,15 @@
+# Source code & repo exposure (adjacent recon — high signal, handle with care)
+inurl:.git/config
+inurl:.git/index
+intext:"index of" "config.php"
+inurl:.env "AWS_SECRET"
+inurl:.env.bak
+inurl:config.php.bak
+filetype:env "DB_PASSWORD"
+filetype:sql "INSERT INTO" "password"
+filetype:log inurl:"access.log"
+inurl:"backup" filetype:sql
+filetype:bak inurl:config
+inurl:.svn/entries
+inurl:.hg/store
+inurl:.git/HEAD

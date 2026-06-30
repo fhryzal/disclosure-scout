@@ -1,0 +1,10 @@
+# Government & academic disclosure programs
+site:*.gov "responsible disclosure"
+site:*.gov.* "vulnerability disclosure"
+site:*.edu "security report" "vulnerability"
+site:*.edu "responsible disclosure"
+site:*.ac.uk "responsible disclosure"
+site:*.gov "bug bounty"
+inurl:/security "responsible disclosure" site:gov
+site:*.gov.uk "vulnerability disclosure"
+site:*.gov.au "responsible disclosure"

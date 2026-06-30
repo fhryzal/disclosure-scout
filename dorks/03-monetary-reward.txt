@@ -1,0 +1,18 @@
+# Programs that explicitly offer monetary reward / compensation
+inurl:/security "bounty" "$"
+inurl:/security "bounty" "EUR"
+inurl:/security "bounty" "GBP"
+inurl:/security "bounty" "INR"
+intext:"responsible disclosure" "reward"
+intext:"responsible disclosure" "bounty"
+intext:"responsible disclosure" "monetary compensation"
+"you may be eligible for monetary compensation"
+"eligible for a reward" inurl:/security
+"monetary reward" inurl:/security
+"bug bounty" "reward" inurl:/security
+intext:"BugBounty" intext:"BTC" intext:"reward"
+intext:"security report" "reward" inurl:report
+intext:"security report" "monetary"
+inurl:/security "swag"
+inurl:/security "hall of fame" -"bounty"
+inurl:/security "CVE" "reward"

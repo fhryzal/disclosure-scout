@@ -1,0 +1,16 @@
+# Regional responsible disclosure (EU-heavy — NL/UK/DE/BE/AT/AU/BR/IN)
+site:*.nl "responsible disclosure" "reward"
+site:*.uk "responsible disclosure" "reward"
+site:*.de "responsible disclosure" "bounty"
+site:*.be "responsible disclosure"
+site:*.at "responsible disclosure"
+site:*.au "responsible disclosure" "bounty"
+site:*.br "responsible disclosure"
+site:*.eu "responsible disclosure" "bounty"
+site:*.in "responsible disclosure" "reward"
+"responsible disclosure" "europe" "reward"
+"responsible disclosure" r=h:nl
+"responsible disclosure" r=h:uk
+"responsible disclosure" r=h:eu
+"responsible disclosure" university
+"responsible disclosure" "r=h:com"

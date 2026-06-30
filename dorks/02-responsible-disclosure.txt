@@ -1,0 +1,15 @@
+# General responsible disclosure / VDP landing pages
+inurl:/responsible-disclosure
+inurl:/responsible-disclosure-policy
+inurl:/vulnerability-disclosure-policy
+inurl:reporting-security-issues
+inurl:/trust/report-a-vulnerability
+inurl:/security "responsible disclosure"
+intext:"responsible disclosure" inurl:/security
+intext:"vulnerability disclosure" inurl:/security
+"If you believe you've found a security vulnerability"
+"If you find a security issue"
+"vulnerability reporting policy"
+intext:"we take security very seriously" inurl:/security
+inurl:/security intext:"hall of fame"
+inurl:/security "coordinated vulnerability disclosure"

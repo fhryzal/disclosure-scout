@@ -1,0 +1,12 @@
+# Locate security.txt / well-known disclosure contact files
+# These point at where a org wants vuln reports sent.
+inurl:/.well-known/security.txt "contact"
+inurl:/.well-known/security.txt "mailto"
+inurl:/.well-known/security.txt "expires"
+inurl:security.txt "contact" -site:github.com -site:portswigger.net
+inurl:security.txt "bounty" -site:hackerone.com -site:bugcrowd.com
+inurl:security-policy.txt "contact"
+inurl:/security ext:txt "contact"
+intext:"security.txt" inurl:/security
+inurl:/.well-known/security ext:txt "Canonical"
+inurl:/.well-known/security ext:txt "Policy"

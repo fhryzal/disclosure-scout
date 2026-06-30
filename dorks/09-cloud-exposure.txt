@@ -1,0 +1,10 @@
+# Cloud storage & bucket exposure
+site:s3.amazonaws.com inurl:bucket
+inurl:s3.amazonaws.com "index of"
+site:storage.googleapis.com inurl:storage
+site:blob.core.windows.net inurl:container
+inurl:"s3" "accessKeyId"
+filetype:csv "aws_access_key_id"
+inurl:.s3.amazonaws.com intext:ListBucketResult
+site:console.cloud.google.com "storage"
+inurl:amazonaws.com "x-amz"
