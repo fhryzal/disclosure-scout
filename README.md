@@ -1,8 +1,6 @@
 <div align="center">
 
-# disclosure-scout
-
-**Categorized search queries for finding bug bounty programs, VDPs, and disclosure policies — plus adjacent recon dorks for source-code leaks, cloud exposure, and API secrets.**
+<img src="assets/banner.svg" alt="disclosure-scout" width="100%">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
