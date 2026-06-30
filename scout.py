@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """disclosure-scout — read categorized dork files and dispatch to a search backend.
 
-Credited by Bores. MIT license.
+MIT license. See LICENSE.
 
 No keys are hardcoded anywhere. Pick a backend and supply its key via env:
   EXA_API_KEY   -> query Exa (https://exa.ai) REST API, neural semantic search
@@ -22,7 +22,7 @@ import pathlib
 PLATFORM_DENY = (
     "hackerone.com", "bugcrowd.com", "synack.com", "openbugbounty.org",
     "intigriti.com", "yeswehack.com", "hackenproof.com", "cobalt.io",
-    "responsibledisclosure.com",
+    "responsibledisclosure.com", "immunefi.com",
 )
 
 
@@ -52,6 +52,10 @@ class DorkLibrary:
 
 def google_url(q):
     return "https://www.google.com/search?q=" + urllib.parse.quote(q)
+
+
+def bing_url(q):
+    return "https://www.bing.com/search?q=" + urllib.parse.quote(q)
 
 
 def domain_of(url):
@@ -118,17 +122,62 @@ def run_exa_mcp(query, n, _key):
 
 BACKENDS = {"exa": run_exa, "bing": run_bing, "exa-mcp": run_exa_mcp}
 
+LINK_ENGINES = {"google": google_url, "bing": bing_url}
+
 
 def main():
-    ap = argparse.ArgumentParser(description="dispatch disclosure dorks to a search backend")
+    ap = argparse.ArgumentParser(
+        description="dispatch disclosure dorks to a search backend",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""\
+examples:
+  # list ready-to-paste Google search URLs for every dork
+  python3 scout.py --backend links
+
+  # use Bing search URLs instead
+  python3 scout.py --backend links --engine bing
+
+  # query the free no-key Exa MCP endpoint (needs mcporter + exa server)
+  python3 scout.py --backend exa-mcp --num 10 --no-platforms
+
+  # query the paid Exa REST API and filter out big platforms
+  EXA_API_KEY=xxx python3 scout.py --backend exa --num 10 --no-platforms
+
+  # one category, machine-readable
+  python3 scout.py --backend exa-mcp --category 04-crypto-web3.txt --json
+
+  # list available categories
+  python3 scout.py --list
+""",
+    )
     ap.add_argument("--category", help="dork file in dorks/ (default: all)")
     ap.add_argument("--backend", choices=["links", "exa", "exa-mcp", "bing"], default="links")
+    ap.add_argument("--engine", choices=["google", "bing"], default="google",
+                    help="search engine for --backend links (default: google)")
     ap.add_argument("--num", type=int, default=10, help="results per dork")
-    ap.add_argument("--no-platforms", action="store_true", help="filter known bounty platforms (default on)")
+    ap.add_argument("--no-platforms", action="store_true", default=True,
+                    help="filter known bounty platforms (default: on)")
+    ap.add_argument("--platforms", action="store_true",
+                    help="include platform-hosted results (disables --no-platforms)")
     ap.add_argument("--json", action="store_true", help="emit JSON")
+    ap.add_argument("--list", action="store_true", help="list available dork categories and exit")
     args = ap.parse_args()
 
     here = pathlib.Path(__file__).resolve().parent
+
+    if args.list:
+        library = DorkLibrary(here)
+        print("Available dork categories:")
+        for name in library.categories():
+            dorks = DorkLibrary(here).load(name)
+            count = len(dorks.get(name, []))
+            print(f"  {name}  ({count} queries)")
+        return
+
+    # --platforms disables the platform filter
+    if args.platforms:
+        args.no_platforms = False
+
     library = DorkLibrary(here).load(args.category)
 
     key = ""
@@ -139,11 +188,12 @@ def main():
             print(f"set {env_var} env var to use --backend {args.backend}", file=sys.stderr)
             sys.exit(2)
 
+    link_fn = LINK_ENGINES[args.engine]
     collected = {}
     for fname, queries in library.items():
         for q in queries:
             if args.backend == "links":
-                collected.setdefault(fname, []).append({"dork": q, "url": google_url(q)})
+                collected.setdefault(fname, []).append({"dork": q, "url": link_fn(q)})
                 continue
             try:
                 hits = BACKENDS[args.backend](q, args.num, key)

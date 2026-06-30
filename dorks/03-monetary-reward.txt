@@ -1,8 +1,11 @@
 # Programs that explicitly offer monetary reward / compensation
+
+# --- Currency-agnostic ---
 inurl:/security "bounty" "$"
 inurl:/security "bounty" "EUR"
 inurl:/security "bounty" "GBP"
 inurl:/security "bounty" "INR"
+inurl:/security "bounty" "USD"
 intext:"responsible disclosure" "reward"
 intext:"responsible disclosure" "bounty"
 intext:"responsible disclosure" "monetary compensation"
@@ -10,9 +13,41 @@ intext:"responsible disclosure" "monetary compensation"
 "eligible for a reward" inurl:/security
 "monetary reward" inurl:/security
 "bug bounty" "reward" inurl:/security
+
+# --- Crypto payouts ---
 intext:"BugBounty" intext:"BTC" intext:"reward"
-intext:"security report" "reward" inurl:report
-intext:"security report" "monetary"
+intext:"BugBounty" intext:"ETH" intext:"reward"
+intext:"bug bounty" "paid in" "BTC"
+intext:"bug bounty" "paid in" "ETH"
+intext:"bug bounty" "paid in" "SOL"
+intext:"bug bounty" "paid in" "token"
+intext:"bug bounty" "USDC" "reward"
+intext:"bug bounty" "stablecoin" "reward"
+
+# --- Reward tables & tiers ---
+inurl:/security "reward" "tier"
+inurl:/security "reward" "critical" "high" "medium"
+inurl:/security "payout" "critical"
+inurl:/security "up to" "$" "bounty"
+inurl:/security "up to" "EUR" "bounty"
+intext:"bounty" "critical" "$" "high" "$"
+intext:"reward" "low" "medium" "high" "critical"
+inurl:/security "bounty" "table" "reward"
+
+# --- Swag & non-monetary ---
 inurl:/security "swag"
 inurl:/security "hall of fame" -"bounty"
 inurl:/security "CVE" "reward"
+inurl:/security "merch" "bounty"
+inurl:/security "points" "bounty" "reward"
+
+# --- Explicit payment language ---
+"we pay" "bug bounty"
+"compensated" "vulnerability" "report"
+"financial reward" "security" "report"
+"cash" "bounty" "vulnerability"
+"payout" "responsible disclosure"
+"remuneration" "vulnerability" "report"
+"bounty" "bank transfer" "reward"
+"bounty" "PayPal" "reward"
+"bounty" "crypto" "reward" "report"

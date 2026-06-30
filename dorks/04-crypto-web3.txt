@@ -1,24 +1,78 @@
 # Crypto / web3 / DeFi disclosure & bounty programs
-# Pay special attention — many pay directly in native assets, less saturated than big-tech VRPs.
+# Many pay directly in native assets — less saturated than big-tech VRPs.
+# Also check self-hosted crypto programs (category 11) for direct payouts.
+
+# --- By chain/ecosystem ---
 inurl:/security "bug bounty" "BTC"
 inurl:/security "bug bounty" "ETH"
 inurl:/security "bug bounty" "USDC"
+inurl:/security "bug bounty" "SOL"
 inurl:/bug-bounty "bitcoin"
 inurl:/bug-bounty "ethereum"
-"smart contract" "bug bounty" "reward"
-inurl:/security "DeFi" "bounty"
-inurl:/security "wallet" "bounty"
-"protocol" "bug bounty" "Immunefi"
-inurl:/security "audit" "bounty" "token"
+inurl:/bug-bounty "solana"
 intext:"bug bounty" "Solana"
 intext:"bug bounty" "EVM"
 intext:"bug bounty" "Base"
-inurl:/security "on-chain" "reward"
-"responsible disclosure" "web3" "reward"
+intext:"bug bounty" "Arbitrum"
+intext:"bug bounty" "Optimism"
+intext:"bug bounty" "Polygon"
+intext:"bug bounty" "Avalanche"
+intext:"bug bounty" "BSC"
+intext:"bug bounty" "zkSync"
+intext:"bug bounty" "Starknet"
+intext:"bug bounty" "Sui"
+intext:"bug bounty" "Aptos"
+intext:"bug bounty" "Cosmos"
+intext:"bug bounty" "Near"
+intext:"bug bounty" "TON"
+
+# --- By DeFi primitive ---
+"smart contract" "bug bounty" "reward"
+inurl:/security "DeFi" "bounty"
+inurl:/security "wallet" "bounty"
 inurl:/security "bridge" "bounty"
 inurl:/security "staking" "bounty"
+inurl:/security "restaking" "bounty"
+inurl:/security "lending" "bounty"
+inurl:/security "DEX" "bounty"
+inurl:/security "oracle" "bounty"
+inurl:/security "vault" "bounty"
+inurl:/security "yield" "bounty"
+inurl:/security "liquidation" "bounty"
+inurl:/security "governance" "bounty"
+inurl:/security "DAO" "bounty"
+inurl:/security "validator" "bounty"
+inurl:/security "sequencer" "bounty"
+
+# --- By keyword combo ---
+"protocol" "bug bounty" "Immunefi"
+inurl:/security "audit" "bounty" "token"
+inurl:/security "on-chain" "reward"
+"responsible disclosure" "web3" "reward"
 intext:"bug bounty" "Layer2"
 intext:"bug bounty" "rollup"
 intext:"bug bounty" "zk"
-inurl:/security "DAO" "bounty"
-inurl:/security "restaking" "bounty"
+intext:"bug bounty" "MEV"
+intext:"bug bounty" "flash loan"
+intext:"bug bounty" "pool" "reward"
+intext:"bug bounty" "router" "reward"
+intext:"bug bounty" "perp" "reward"
+intext:"bug bounty" "AMM" "reward"
+
+# --- Audit reports as bounty signal ---
+"audit report" "bounty" "reward"
+"audited by" "bug bounty"
+inurl:/security "Spearbit" "bounty"
+inurl:/security "Trail of Bits" "bounty"
+inurl:/security "OpenZeppelin" "bounty"
+inurl:/security "CertiK" "bounty"
+inurl:/security "Halborn" "bounty"
+inurl:/security "Quantstamp" "bounty"
+
+# --- Direct (non-Immunefi) web3 programs ---
+"smart contract" "audit" "reward" -site:immunefi.com
+"on-chain" "bounty" "reward" -site:immunefi.com -site:hackerone.com
+"DeFi" "bug bounty" "reward" -site:immunefi.com
+"protocol" "bug bounty" "reward" -site:immunefi.com -site:hackerone.com
+"submit" "vulnerability" "token" "reward" -site:immunefi.com
+"web3" "responsible disclosure" "reward" -site:immunefi.com

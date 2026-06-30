@@ -1,6 +1,40 @@
 # generated scan output
 output/
+results/
+*.json
+!dorks/*.txt
+
 # python
 __pycache__/
 *.pyc
 *.pyo
+*.egg-info/
+.venv/
+venv/
+env/
+
+# environment & secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*credentials*
+*secret*
+*token*
+*password*
+*apikey*
+*api_key*
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

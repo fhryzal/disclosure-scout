@@ -1,16 +1,55 @@
-# Regional responsible disclosure (EU-heavy — NL/UK/DE/BE/AT/AU/BR/IN)
+# Regional responsible disclosure (EU-heavy — NL/UK/DE/BE/AT/AU/BR/IN/SG/JP/KR)
+
+# --- Netherlands (very active VDP culture) ---
 site:*.nl "responsible disclosure" "reward"
+site:*.nl "bug bounty"
+"responsible disclosure" r=h:nl
+"responsible disclosure" "nederland" "reward"
+
+# --- United Kingdom ---
 site:*.uk "responsible disclosure" "reward"
+site:*.ac.uk "responsible disclosure"
+site:*.gov.uk "vulnerability disclosure"
+"responsible disclosure" r=h:uk
+
+# --- Germany ---
 site:*.de "responsible disclosure" "bounty"
+site:*.de "Sicherheitslücke" "Belohnung"
+site:*.de "Verantwortungsvolle Offenlegung"
+
+# --- Belgium / Austria / Switzerland ---
 site:*.be "responsible disclosure"
 site:*.at "responsible disclosure"
-site:*.au "responsible disclosure" "bounty"
-site:*.br "responsible disclosure"
+site:*.ch "responsible disclosure" "reward"
+
+# --- European Union ---
 site:*.eu "responsible disclosure" "bounty"
-site:*.in "responsible disclosure" "reward"
-"responsible disclosure" "europe" "reward"
-"responsible disclosure" r=h:nl
-"responsible disclosure" r=h:uk
 "responsible disclosure" r=h:eu
+"responsible disclosure" "europe" "reward"
+
+# --- Australia / New Zealand ---
+site:*.au "responsible disclosure" "bounty"
+site:*.nz "responsible disclosure"
+
+# --- Brazil / Latin America ---
+site:*.br "responsible disclosure"
+site:*.br "programa de recompensas" "segurança"
+site:*.mx "recompensa" "vulnerabilidad"
+
+# --- India / Southeast Asia ---
+site:*.in "responsible disclosure" "reward"
+site:*.sg "responsible disclosure" "bounty"
+site:*.id "responsible disclosure" "reward"
+site:*.th "responsible disclosure"
+
+# --- Japan / Korea ---
+site:*.jp "bug bounty" "reward"
+site:*.jp "脆弱性" "報奨金"
+site:*.kr "bug bounty" "reward"
+site:*.kr "취약점" "보상"
+
+# --- University / academic ---
 "responsible disclosure" university
-"responsible disclosure" "r=h:com"
+"responsible disclosure" "ac.uk"
+"responsible disclosure" "edu" "reward"
+"responsible disclosure" r=h:com

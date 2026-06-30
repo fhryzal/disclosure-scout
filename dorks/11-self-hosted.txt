@@ -1,0 +1,59 @@
+# Self-hosted bug bounty & VDP programs
+# Companies running their own disclosure infrastructure — no HackerOne/Bugcrowd middleman.
+# Higher payouts, faster triage, fewer duplicates.
+# Platform filters are essential here — use --no-platforms.
+
+# --- Self-hosted submission pages ---
+inurl:"/submit-vulnerability" "reward"
+inurl:"/report-bug" "bounty"
+inurl:"/security/report" "reward"
+inurl:"/vulnerability" "submit" "reward"
+inurl:"/security/submit" "bounty"
+inurl:"/report" "vulnerability" "reward" -site:hackerone.com -site:bugcrowd.com
+inurl:"/security" "submit a report" "reward"
+
+# --- Direct reward language (no platform) ---
+"report a vulnerability" "$" -site:hackerone.com -site:bugcrowd.com
+"report vulnerability" "bounty" -site:hackerone.com -site:bugcrowd.com -site:intigriti.com
+"submit a vulnerability" "reward" -site:hackerone.com -site:bugcrowd.com
+"vulnerability submission" "reward" -site:hackerone.com
+"security report" "submit" "reward" -site:hackerone.com -site:bugcrowd.com
+"disclosure" "submit" "reward" -site:hackerone.com -site:bugcrowd.com
+
+# --- Self-hosted/in-house language ---
+"we run our own" "bug bounty"
+"in-house" "bug bounty" "reward"
+"our own" "vulnerability" "reward"
+"direct" "bug bounty" "program"
+"not hosted on" "bug bounty"
+"self-hosted" "bug bounty"
+"independent" "bug bounty" "program"
+
+# --- Open-source bounty platforms (self-deployed) ---
+"powered by Bugheist"
+"powered by Flawd"
+"powered by BeeAware"
+"powered by Vulnreport"
+"powered by BucketBounty"
+"powered by bugbounty.jp"
+"powered by MagFreak"
+"runs on Bugheist"
+"uses Bugheist"
+"deployed" "bug bounty" "platform"
+
+# --- Direct crypto/web3 self-hosted ---
+"smart contract" "audit" "reward" -site:immunefi.com
+"on-chain" "bounty" "reward" -site:immunefi.com -site:hackerone.com
+"DeFi" "bug bounty" "reward" -site:immunefi.com
+"protocol" "bug bounty" "reward" -site:immunefi.com -site:hackerone.com
+"submit" "vulnerability" "token" "reward" -site:immunefi.com
+
+# --- Hall of fame (direct) ---
+inurl:"/security" "hall of fame" "reward" -site:hackerone.com -site:bugcrowd.com
+inurl:"/security" "hall of fame" "$" -site:hackerone.com
+inurl:"/security" "thanks" "researchers" "reward"
+inurl:"/security" "acknowledgments" "reward" -site:hackerone.com
+
+# --- security.txt pointing to direct email (not platform) ---
+inurl:/.well-known/security.txt "mailto" -site:hackerone.com -site:bugcrowd.com
+inurl:security.txt "contact" "reward" -site:hackerone.com -site:bugcrowd.com

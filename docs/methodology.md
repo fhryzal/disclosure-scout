@@ -2,11 +2,14 @@
 
 ## How to use this kit
 
-1. **Pick a category** that matches your goal. For paid programs start with
-   `03-monetary-reward.txt` and `04-crypto-web3.txt`. For breadth start with
-   `01-security-txt.txt`.
+1. **Pick a category** that matches your goal.
+   - Paid programs → `03-monetary-reward.txt`, `04-crypto-web3.txt`
+   - Direct/self-hosted programs → `11-self-hosted.txt`
+   - Breadth → `01-security-txt.txt`
+   - Regional → `05-regional.txt`
+   - Government/academic → `06-gov-edu.txt`
 2. **Run the dorks** either by hand (paste into Google / your search engine of
-   choice) or via `scout.py` with a backend key.
+   choice) or via `scout.py` with a backend.
 3. **Filter the noise.** `scout.py --no-platforms` drops results pointing at the
    big bounty platforms so you see *direct* programs first. Direct programs are
    usually less saturated and triage faster.
@@ -22,6 +25,9 @@
 When ranking discovered programs, weigh:
 
 - **Direct vs platform-hosted** — direct programs triage faster, less queue.
+- **Self-hosted** — programs running their own bounty infrastructure
+  (Bugheist, Flawd, in-house forms) often have lower duplicate density and
+  more flexible reward negotiation.
 - **Reward clarity** — pages that publish a reward table tend to actually pay.
 - **Scope specificity** — narrow scope (one app, one API) is easier to exhaust
   than "all *.company.com".
@@ -29,6 +35,22 @@ When ranking discovered programs, weigh:
   for a "launched" date or recent hall-of-fame entries.
 - **Asset type** — transactional / financial / on-chain assets produce
   higher-impact findings than marketing sites.
+
+## Self-hosted programs
+
+Category `11-self-hosted.txt` targets programs that run their own disclosure
+infrastructure without a platform middleman. These are valuable because:
+
+- **Faster triage** — your report goes straight to the internal team.
+- **Fewer duplicates** — less traffic than HackerOne/Bugcrowd programs.
+- **Flexible rewards** — direct programs sometimes pay more for high-impact
+  findings, especially in crypto/web3.
+
+Look for:
+- In-house submission forms (`/submit-vulnerability`, `/report-bug`)
+- security.txt pointing to a direct email (not a platform URL)
+- "Powered by" footers for open-source bounty platforms (Bugheist, Flawd, etc.)
+- Language like "we run our own" or "in-house bug bounty"
 
 ## Legal & ethics
 
